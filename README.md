@@ -7,6 +7,9 @@ Anda dapat reproduce Repo ini dengan melakukan :
 $ git clone (https://github.com/dickygiancini/deuscode)
 $ composer install
 ```
+```bash
+$ composer install
+```
 </li>
 <li>
 Kemudian copy file `.env.example` dan paste ke root direktori Anda, dan ubah menjadi file statis `.env`
