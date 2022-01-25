@@ -74,6 +74,19 @@ class CustomerController extends Controller
         return back()->with(['success' => 'Sukses Tambah Data Customer']);
     }
 
+    public function storeCustomer(Request $request)
+    {
+        $request->validate([
+            'nama' => ['required'],
+            'keterangan' => ['required'],
+            'status' => ['required'],
+        ]);
+
+        $create = CustomerTypes::create($request->all());
+
+        return back()->with(['success' => 'Sukses Tambah Data Customer Tipe']);
+    }
+
     public function setstatus(Request $request)
     {
         $update = Customer::find($request->id);

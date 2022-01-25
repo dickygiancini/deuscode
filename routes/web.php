@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\CustomerController::class, 'index']);
-Route::post('/store', [\App\Http\Controllers\CustomerController::class, 'store'])->name('store.data');
-Route::get('/edit', [\App\Http\Controllers\CustomerController::class, 'edit'])->name('store.edit');
-Route::post('/update', [\App\Http\Controllers\CustomerController::class, 'update'])->name('store.update');
+Route::post('/store', [\App\Http\Controllers\CustomerController::class, 'store'])->name('store');
+Route::post('/storecustomer', [\App\Http\Controllers\CustomerController::class, 'storeCustomer'])->name('store.customer');
+Route::get('/edit', [\App\Http\Controllers\CustomerController::class, 'edit'])->name('edit');
+Route::post('/update', [\App\Http\Controllers\CustomerController::class, 'update'])->name('update');
 Route::get('/datatables', [\App\Http\Controllers\CustomerController::class, 'datatables'])->name('datatables');
-Route::post('/setstatus', [\App\Http\Controllers\CustomerController::class, 'setstatus'])->name('store.setstatus');
+Route::post('/setstatus', [\App\Http\Controllers\CustomerController::class, 'setstatus'])->name('setstatus');

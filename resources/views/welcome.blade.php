@@ -40,10 +40,47 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
+                        <h5 class="card-title">Data Customer</h5>
+                    </div>
+                    <div class="card-footer">
+                        <form action="{{ route('store.customer') }}" method="post"  autocomplete="off">
+                            <div class="row">
+                                @method('POST')
+                                @csrf
+                                <div class="col-md-3">
+                                    <label for="nama" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="keterangan" class="form-label">Keterangan</label>
+                                    <input type="text" class="form-control" id="keterangan" name="keterangan" required>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="status" class="form-label">Status</label>
+                                    <select required id="status" name="status" class="form-select">
+                                        <option value="1">Active</option>
+                                        <option value="1">Inactive</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="submit" class="form-label">&nbsp;</label>
+                                    <button type="submit" class="btn btn-primary mt-4" id="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
                         <h5 class="card-title">Data Entry</h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('store.data') }}" method="post"  autocomplete="off">
+                        <form action="{{ route('store') }}" method="post"  autocomplete="off">
                             <div class="row">
                                 @method('POST')
                                 @csrf
@@ -134,7 +171,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ route('store.update') }}" method="post"  autocomplete="off">
+                    <form action="{{ route('update') }}" method="post"  autocomplete="off">
                         <div class="row">
                             @csrf
                             <input type="hidden" name="id" id="id_edit">
@@ -312,7 +349,7 @@
 
                     $.ajax({
                         type: "POST",
-                        url: "{{ route('store.setstatus') }}",
+                        url: "{{ route('setstatus') }}",
                         data: {
                             id: id
                         },
@@ -340,7 +377,7 @@
         {
             $.ajax({
                 type: 'GET',
-                url: "{{ route('store.edit') }}",
+                url: "{{ route('edit') }}",
                 data: {
                     id: id
                 },
