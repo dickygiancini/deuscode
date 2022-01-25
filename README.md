@@ -2,7 +2,7 @@
 Anda dapat reproduce Repo ini dengan melakukan :
 1. 
 ```bash
-$ git clone (https://github.com/dickygiancini/deuscode)
+$ git clone https://github.com/dickygiancini/deuscode
 $ composer install
 ```
 
