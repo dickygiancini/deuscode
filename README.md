@@ -2,25 +2,25 @@
 Anda dapat reproduce Repo ini dengan melakukan :
 
 <ol>
-<li>1.
-```
+<li>
+'''
 git clone (https://github.com/dickygiancini/deuscode)
 composer install
-```
+'''
 </li>
 <li>
-2. Kemudian copy file `.env.example` dan paste ke root direktori Anda, dan ubah menjadi file statis `.env`
+Kemudian copy file `.env.example` dan paste ke root direktori Anda, dan ubah menjadi file statis `.env`
 </li>
 <li>
-3. Kemudian lakukan konfigurasi environment seperti database, username dan password
+Kemudian lakukan konfigurasi environment seperti database, username dan password
 </li>
 </li>
-4. Lalu, lakukan perintah berikut
-```
+Lalu, lakukan perintah berikut
+'''
 php artisan key:generate
 php artisan migrate
 php artisan serve
-```
+'''
 </li>
 </ol>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
