@@ -4,8 +4,8 @@ Anda dapat reproduce Repo ini dengan melakukan :
 <ol>
 <li>
 ```bash
-git clone (https://github.com/dickygiancini/deuscode)
-composer install
+$ git clone (https://github.com/dickygiancini/deuscode)
+$ composer install
 ```
 </li>
 <li>
@@ -17,9 +17,9 @@ Kemudian lakukan konfigurasi environment seperti database, username dan password
 </li>
 Lalu, lakukan perintah berikut
 ```bash
-php artisan key:generate
-php artisan migrate
-php artisan serve
+$ php artisan key:generate
+$ php artisan migrate
+$ php artisan serve
 ```
 </li>
 </ol>
